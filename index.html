@@ -14,11 +14,11 @@
     <header name="inicio" id="inicio">
         <nav>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#participar">Como Participar?</a></li>
-                <li><a href="#presente">Como Presentear?</a></li>
-                <li><a href="#lista">Presentes</a></li>
-                <li><a href="#doacao">Doação</a></li>
+                <li><a id="btInicio" href="#inicio">Início</a></li>
+                <li><a id="btParticipar" href="#participar">Como Participar?</a></li>
+                <li><a id="btPresente" href="#presente">Como Presentear?</a></li>
+                <li><a id="btLista" href="#lista">Presentes</a></li>
+                <li><a id="btDoacao" href="#doacao">Doação</a></li>
                 <!-- <li><a href="#dados">Dados do Casal</a></li> -->
             </ul>
         </nav>
@@ -111,40 +111,33 @@
             </p>
         </div>
     </section>
-    <!-- <section id="dados">
-        <div class="entregas">
-            <h3>Entregas</h3>
-            <p>
-                <strong>Endereço:</strong> <br>
-                621-1045 Haro St. <br>
-                Vancouver - British Columbia <br>
-                Cód. Postal: V6E 3Z8 
-            </p>
-        </div>
-        <div class="doar">
-            <h3>Depósitos para</h3>
-            <p>
-                <strong>Eduardo Levi Batista de Carvalho</strong> <br>
-                305 - 586 - 558 - 82 <br><br>
-                NUBANK - Nu Pagamentos SA (260)<br>
-                Agência: 0001 | Conta Corrente: 7393122-3 <br><br>
-                ITAÚ (341)<br>
-                Agência: 1572 | Conta Corrente: 09413-2            
-            </p>
-            <p>
-                <strong>Tatiana da Silva Carvalho</strong> <br>
-                309 - 649 - 178 - 07 <br><br>
-                NUBANK - Nu Pagamentos SA (260)<br>
-                Agência: 0001 | Conta Corrente: 3057196-0 <br><br>
-                RBC - ROYAL BANK of CANADA <br>
-                Branch Transit: 00010 | Bank Number: 003 | Account Number: 5900972 <br><br>
-                Interac E-TRANSFER: <br>
-                <a href="mailto:tattcarvalho@gmail.com">tattcarvalho@gmail.com</a>
-
-            </p>
-        </div>
-
-    </section> -->
-
+    <script src="js/scripts.js" text="javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+          
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+          
+                // Store hash
+                var hash = this.hash;
+          
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                }, 800, function(){
+             
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+                });
+              } // End if
+            });
+          });
+    </script>
 </body>
 </html>

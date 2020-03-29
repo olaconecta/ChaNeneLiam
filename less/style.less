@@ -85,10 +85,17 @@ nav {
                     outline: @azul 2px dotted;
                     background-color: @indigo;                    
                     color: @branco;
-                }                
+                }                                
             }
         }
     }
+}
+.active {
+    border: @verde 2px solid;
+    outline: @amarelo 1px dotted;
+    background-color: @azul;                    
+    color: @branco;
+
 }
 section {
     height: 100vh;
@@ -166,7 +173,7 @@ section {
                 }
                 img {
                     .img;
-                    width: 210px;
+                    width: 200px;
                     border-radius: 7px;
                     .borda-img;
                 }
@@ -195,3 +202,9 @@ section {
         }
     }            
 } 
+.fake-scroll {
+    position: absolute;
+    top: 0;
+    width: 1px;
+  }
+  
