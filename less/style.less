@@ -40,7 +40,7 @@ body {
         font-family: 'Fredoka One', cursive;
         &:hover {
             text-decoration: none;
-            color:@verde;
+            color:@azul;
         }
     }
 }
@@ -102,6 +102,7 @@ section {
     h2 {
         text-align: center;
         font-size: 61px;
+        margin-top:0px ;
         // -webkit-text-stroke: 1px @azulbebe;
 
     }
@@ -121,7 +122,7 @@ section {
         }
     }
     &#participar {
-        background: url("../img/bg4.jpg") repeat ;
+        background: url("../img/bg4.jpg") repeat fixed;
         // background-position: center center;
         // background-color: lighten(@amarelo, 10%);
         // background-color: darken(@azulbebe, 10%);        
@@ -140,14 +141,15 @@ section {
                 // text-align: center;
                 i {
                     font-size:130px;
-                    color: @indigo;
+                    color: @azul;
                 }
             }
         } 
     }
     &#lista {        
-        background: url("../img/gifts-branco.jpg") repeat ;        
+        background: url("../img/gifts-branco.jpg") repeat fixed;        
         ol {
+            margin-top: 40px;
             list-style: none;
             li{
                 height: 320px;
@@ -175,7 +177,7 @@ section {
         background: url("../img/grana.jpg") repeat ;
         // background: rgba(0, 130, 22, 0.4);
         h2, h3 {
-            color:@branco;
+            color:@azul;
             i {
                 font-size:30px;
             }
@@ -186,6 +188,9 @@ section {
                 float: left;
                 width: 50%;
                 margin-top: -3px;
+                strong {
+                    font-family: 'Fredoka One', cursive;
+                }
             }
         }
     }            
