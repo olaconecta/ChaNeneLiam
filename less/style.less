@@ -34,7 +34,7 @@ html {
 
 }
 body {
-    background: url('../img/bg.jpg') repeat fixed;     
+    background: url('../img/bg.jpg') repeat;     
     // font-family: 'Spicy Rice', cursive;      
     font-family: 'Fredoka One', cursive;
     width: 100%;
@@ -60,6 +60,7 @@ header {
     // background-color: white;
     // .width;
     height: 94vh;
+    z-index: 1;
 }
 
 nav {
@@ -222,6 +223,7 @@ section {
       header {
         background-position: bottom center;
         background-size:contain;
+        // background-attachment: scroll;
       }
       nav {
           bottom:-5px;
@@ -301,7 +303,7 @@ section {
                     }
                 }
             }          
-        }
+        }        
     }
     @media screen and (max-width:360px) {
         section {
