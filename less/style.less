@@ -90,7 +90,10 @@ nav {
                     outline: @azul 2px dotted;
                     background-color: @indigo;                    
                     color: @branco;
-                }                                
+                }  
+                i {
+                    display: none;
+                }                                              
             }
         }
     }
@@ -139,6 +142,9 @@ section {
         // background-color: lighten(@amarelo, 10%);
         // background-color: darken(@azulbebe, 10%);        
         box-shadow: inset 0px 10px 14px @azul;
+        div {
+            .centraliza;
+        }
         img {
             .img;
             .borda-img;
@@ -212,4 +218,87 @@ section {
     top: 0;
     width: 1px;
   }
-  
+  @media screen and (max-width:520px) {
+      nav {
+          bottom:-5px;
+          text-align: center;
+          ul {
+              padding: 0;
+              display: inline-flex;
+              width: 100%;
+              li{
+                  margin:0px;
+                  width: 100vw / 5;
+                  a{                    
+                      width: 100vw / 5;
+                      span{
+                          display: none;
+                        }
+                        i {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        section {
+            padding: 40px 30px;
+            h2 {
+                font-size: 46px;
+            }
+            p {
+                width: 100%;
+            }
+            ol {
+                text-align: center;            
+                display: inline-table;
+                li {
+                    margin: 10px auto;
+                }
+            }
+            &#participar {
+                div {
+                    display: grid;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            &#lista {
+                height: auto;
+                ol {
+                    text-align: center;
+                    li {
+                        height: auto;
+                        img {
+                            // display: none;
+                            width: 200px;                         
+                        }
+                    }
+                }
+            }
+            &#doacao {
+                height: auto;
+                .contas {
+                    display: inline-table;
+                }
+            }
+            &#presente {
+                ol {     
+                    text-align: center;           
+                    li {
+                        
+                        i {font-size: 50px;}
+                    }
+                }
+            }          
+        }
+    }
+    @media screen and (max-width:360px) {
+        section {
+            ol {
+                padding: 0 10px;
+            }
+        }
+    }
