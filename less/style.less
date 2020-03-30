@@ -34,7 +34,7 @@ html {
 
 }
 body {
-    background: url('../img/bg.jpg') repeat;     
+    background: url('../img/bg.jpg') repeat fixed;     
     // font-family: 'Spicy Rice', cursive;      
     font-family: 'Fredoka One', cursive;
     width: 100%;
@@ -220,10 +220,13 @@ section {
     width: 1px;
   }
   @media screen and (max-width:520px) {
+      body{
+        background: url('../img/bg.jpg') repeat scroll;
+      }
       header {
         background-position: bottom center;
         background-size:contain;
-        // background-attachment: scroll;
+        background-attachment: scroll;
       }
       nav {
           bottom:-5px;
