@@ -13,8 +13,8 @@
     <!-- <iframe src="https://www.thingstogetme.com/55498af5877" width="1240" height="800"></iframe> -->
     <header name="inicio" id="inicio">
         <nav>
-            <ul>
-                <li><a id="btInicio" href="#inicio">Início</a></li>
+            <ul class="menu">
+                <li><a id="btInicio" href="#inicio" class="active">Início</a></li>
                 <li><a id="btParticipar" href="#participar">Como Participar?</a></li>
                 <li><a id="btPresente" href="#presente">Como Presentear?</a></li>
                 <li><a id="btLista" href="#lista">Presentes</a></li>
@@ -138,6 +138,9 @@
               } // End if
             });
           });
+          
+          // Quando tem mais de uma página HTML highlitgh o botao desta
+          $('nav li a[href="/' + location.pathname.split("/")[1] + '"]').addClass('active');
     </script>
 </body>
 </html>

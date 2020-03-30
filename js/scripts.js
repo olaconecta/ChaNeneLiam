@@ -4,38 +4,12 @@ var presente = document.getElementById("btPresente");
 var lista = document.getElementById("btLista");
 var doacao = document.getElementById("btDoacao");
 
-inicio.addEventListener('click', function() {    
-    inicio.classList.add("active");
-    participar.classList.remove("active");
-    presente.classList.remove("active");
-    lista.classList.remove("active");
-    doacao.classList.remove("active");
-});
-participar.addEventListener('click', function() {    
-    participar.classList.add("active");
-    inicio.classList.remove("active");
-    presente.classList.remove("active");
-    lista.classList.remove("active");
-    doacao.classList.remove("active");
-});
-presente.addEventListener('click', function() {    
-    presente.classList.add("active");
-    inicio.classList.remove("active");
-    participar.classList.remove("active");
-    lista.classList.remove("active");
-    doacao.classList.remove("active");
-});
-lista.addEventListener('click', function() {    
-    lista.classList.add("active");
-    inicio.classList.remove("active");
-    participar.classList.remove("active");
-    presente.classList.remove("active");
-    doacao.classList.remove("active");
-});
-doacao.addEventListener('click', function() {    
-    doacao.classList.add("active");
-    inicio.classList.remove("active");
-    participar.classList.remove("active");
-    presente.classList.remove("active");
-    lista.classList.remove("active");
-});
+var btns = [inicio, participar, presente, lista, doacao ];
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace("active", "");
+    this.className += " active";
+  });
+}
