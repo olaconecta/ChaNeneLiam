@@ -62,7 +62,7 @@
                 <p><span>1.</span><br><br> Acesse aqui a <a href="https://bit.ly/ChaNeneLista" target="_blank">lista de presentes</a> </p></li>            
             <li>
                 <img src="img/lista-produto.jpg">
-                <p><span>2.</span><br><br> Escolha um item da lista e acesse a loja virtual deste item</p>
+                <p><span>2.</span><br><br> Escolha um item da lista e acesse a loja virtual deste</p>
             </li>            
             <li>
                 <img src="img/loja.jpg">
@@ -141,6 +141,26 @@
           
           // Quando tem mais de uma página HTML highlitgh o botao desta
           $('nav li a[href="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+          var addClassOnScroll = function () {
+            var windowTop = $(window).scrollTop();
+            $('section[id]').each(function (index, elem) {
+                var offsetTop = $(elem).offset().top;
+                var outerHeight = $(this).outerHeight(true);
+
+                if( windowTop > (offsetTop - 50) && windowTop < ( offsetTop + outerHeight)) {
+                    var elemId = $(elem).attr('id');
+                    $("nav ul li a.active").removeClass('active');
+                    $("nav ul li a[href='#" + elemId + "']").addClass('active');
+                }
+            });
+        };
+
+        $(function () {
+            $(window).on('scroll', function () {
+                addClassOnScroll();
+            });
+        });
+
     </script>
 </body>
 </html>
