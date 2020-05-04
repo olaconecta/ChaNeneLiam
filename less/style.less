@@ -63,13 +63,16 @@ header {
     height: 94vh;
     z-index: 1;
 }
-.data {
+.data, .insta {
     height: 380px;
     width: auto;
     // float: right;
     position: relative;
     left: 20vw;    
-
+}
+.insta {
+    left: unset;
+    right: -45vw;
 }
 nav {
     margin-top: 15px; 
@@ -258,6 +261,10 @@ section {
       }
       .data {
         left: 0vw; 
+        height: 280px;
+      }
+      .insta {
+        right: 0vw; 
         height: 280px;
       }
       nav {
