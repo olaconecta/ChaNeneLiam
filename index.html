@@ -114,9 +114,22 @@
             </p>
         </div>
     </section>
+    <div id="cntr"> 
+        The number of visitors is : 
+        <span>0</span>
+    </div>
+
     <script src="js/scripts.js" text="javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        function counter_fn(){
+            var counter = $('#cntr span').text(); // geting value from span
+            var count = 0;
+            count = parseInt(counter.value);
+            count = count+1;
+            counter.innerHTML = parseInt(count);
+       }
+       window.onload = counter_fn;  
         $(document).ready(function(){
             // Add smooth scrolling to all links
             $("a").on('click', function(event) {
