@@ -7,6 +7,10 @@
 @verde: #1ea4a9;
 @indigo: rgb(75, 0, 130);
 @branco: whitesmoke;
+// * {
+//     padding:0;
+//     margin:0;
+// }
 
 .width {
     width: 100vw;
@@ -152,6 +156,8 @@ section {
         list-style: none;
     }
     ol {
+        padding-left: 0;
+        padding-inline-start: 0px ;
         list-style: none;
         .centraliza;    
         li {
@@ -185,6 +191,7 @@ section {
         ol {  
             .centraliza;    
             margin: 100px auto; 
+            padding-left:0;
             li {
                 text-align: center;
                 margin: 0 15px;
@@ -351,11 +358,14 @@ section {
                 font-size: 46px;
             }
             p {
-                width: 80%;
+                // width: 80%;
             }
             ol {
                 text-align: center;            
                 display: inline-table;
+                padding-left: 40px;
+                    padding-inline-start: 40px;
+
                 li {
                     margin: 10px auto;
                 }
@@ -373,6 +383,8 @@ section {
                 height: auto;
                 ol {
                     text-align: center;
+                    padding-left: 40px;
+                    padding-inline-start: 40px;
                     li {
                         height: auto;
                         text-align: center;
@@ -394,11 +406,12 @@ section {
                 }
             }
             &#presente {
-                ol {     
+                ol {                         
                     text-align: center;           
                     li {
+                        text-align: center;           
                         
-                        i {font-size: 50px;}
+                        i {font-size: 52px;}
                     }
                 }
             }          
