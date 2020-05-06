@@ -201,6 +201,7 @@ section {
             margin-top: 40px;
             li{
                 height: 320px;
+                text-align: center;
                 p{
                     text-align: center;
                     span {
@@ -250,9 +251,23 @@ section {
     top: 0;
     width: 1px;
   }
-  #cntr {
-    .centraliza;
-}
+  #idiomas {
+    position: fixed;
+    top: 20px;
+    right:15px;
+    text-align: center;
+    font-size:10px;
+    z-index: 2147483650;
+    .bandeiras{
+      img {
+        width: 30px;
+        height: auto;
+        // border-radius:30px;
+        // border: 1px solid white;
+        // box-shadow: 1px 1px 2px @white;
+      }
+    }
+  }
   @media screen and (max-width:520px) {
       body{
         background: url('../img/bg.jpg') repeat scroll;
@@ -360,6 +375,7 @@ section {
                     text-align: center;
                     li {
                         height: auto;
+                        text-align: center;
                         img {
                             // display: none;
                             width: 200px;                         
